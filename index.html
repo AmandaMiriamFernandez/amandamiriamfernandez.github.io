@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -31,262 +29,174 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
       body {
-        font-family: 'Inconsolata', monospace;
-        font-size: 18px;
-      }
-      #particles-canvas {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-        opacity: 0.15;
-      }
-      main {
-        position: relative;
-        z-index: 1;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 15px;
       }
     </style>
   </head>
 
-  <body class="antialiased bg-black">
+  <body class="bg-white text-black antialiased">
+    <main class="mx-auto px-6 py-16" style="width: min(28rem, 90vw)">
 
-    <main class="my-20 grid justify-center text-gray-400">
-      <div class="space-y-5" style="width: min(72rem, 90vw)">
-        <div class="mx-auto space-y-5" style="max-width: 32rem">
-          <p class="leading-loose text-justify text-lg text-gray-300">
-            <span class="font-bold">Hello, world! I'm Amanda,</span>
-            a journalist learning to <code class="text-cyan-600 [font-family:inherit]">&lt;code/&gt;</code> at the Columbia Journalism School.
-          </p>
-          <p class="leading-loose text-justify text-lg text-gray-300">
-            I spend most of my time looking for interesting datasets and trying to make sense of the numbers. This is where I share my data projects and experiments as I learn along the way.
-          </p>
+      <!-- Name -->
+      <h1 class="text-2xl font-bold mb-5">Amanda Fernandez</h1>
+
+      <!-- Bio -->
+      <p class="leading-relaxed mb-3">
+        <span class="font-bold">Hello, world!</span> I'm a journalist learning to
+        <code class="text-cyan-600" style="font-family: inherit;">&lt;code/&gt;</code>
+        at the Columbia Journalism School.
+      </p>
+      <p class="leading-relaxed text-gray-700">
+        I spend most of my time looking for interesting datasets and trying to make sense of the numbers.
+        This is where I share my data projects and experiments as I learn along the way.
+      </p>
+
+      <!-- Divider -->
+      <hr class="border-gray-300 my-6">
+
+      <!-- Nav links -->
+      <nav class="flex flex-wrap gap-6 mb-14 text-black justify-center">
+        <a class="underline hover:text-gray-500" href="https://www.linkedin.com/in/amanda-fernandez-b0356a250/">LinkedIn</a>
+        <a class="underline hover:text-gray-500" href="https://docs.google.com/document/d/1P8hC-WWcE69hRjr3RLwG0hY5iSD1E7iPp8gfOn5ew1g/edit?usp=sharing" target="_blank">Resume</a>
+        <a class="underline hover:text-gray-500" href="mailto:rmf2196@columbia.edu">Email</a>
+      </nav>
+
+      <!-- Project cards -->
+      <div class="grid grid-cols-1 gap-6">
+
+        <a
+          class="block space-y-3 group border border-gray-200 rounded-md p-4"
+          href="https://amandamiriamfernandez.github.io/Cig_Tax/"
+          target="_blank"
+        >
+          <img alt="Up in Smoke: Cigarette Tax and Smuggling" src="cig-tax-thumb.png"
+            class="w-full rounded object-cover bg-gray-100" style="aspect-ratio: 16/9;" />
+          <div class="font-bold leading-snug group-hover:underline">Up in Smoke: How Cigarette Taxes Drive a National Smuggling Market</div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-500">D3.js</span>
+            <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-500">Python</span>
+            <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-500">Scrollama</span>
+          </div>
+          <div class="text-gray-600 leading-relaxed">Used Python and pandas to analyze state-level cigarette smuggling rates, finding that high-tax states drive massive black market inflows while low-tax states become accidental suppliers. Built a scrollytelling map, scatter plot, and diverging bar chart to show the geographic pattern.</div>
+        </a>
+
+        <a
+          class="block space-y-3 group border border-gray-200 rounded-md p-4"
+          href="https://amandamiriamfernandez.github.io/saffronties/"
+          target="_blank"
+        >
+          <img alt="Saffron Ties" src="saffronties-thumb.jpg"
+            class="w-full rounded object-cover bg-gray-100" style="aspect-ratio: 16/9;" />
+          <div class="font-bold leading-snug group-hover:underline">Saffron Ties: India's Global Nationalist Network</div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-500">Python</span>
+            <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-500">Datawrapper</span>
+            <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-500">ai2html</span>
+            <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-500">Adobe Illustrator</span>
+          </div>
+          <div class="text-gray-600 leading-relaxed">Used Python and pandas to map 108+ Hindu nationalist organizations across 17 U.S. states and 2,600+ globally, finding their transnational network operates through an interlocking web of charities, PACs, and lobbying groups.</div>
+        </a>
+
+        <a
+          class="block space-y-3 group border border-gray-200 rounded-md p-4"
+          href="https://amandamiriamfernandez.github.io/Motor_Vehicle_Crashes/"
+          target="_blank"
+        >
+          <img alt="Motor Vehicle Crashes" src="motor-crashes-thumb.jpg"
+            class="w-full rounded object-cover bg-gray-100" style="aspect-ratio: 16/9;" />
+          <div class="font-bold leading-snug group-hover:underline">Who's Behind the Wheel When Motor Crashes Happen?</div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-500">Python</span>
+            <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-500">Datawrapper</span>
+            <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-500">ggplot</span>
+          </div>
+          <div class="text-gray-600 leading-relaxed">Used Python and pandas to analyze New York State crash data to examine gender disparities in motor vehicle accidents. Data visualizations with ggplot and Datawrapper.</div>
+        </a>
+
+        <div class="block space-y-3 border border-gray-200 rounded-md p-4">
+          <img alt="India is getting complacent in its fight against polio: Data" src="graph.jpg"
+            class="w-full rounded object-cover bg-gray-100" style="aspect-ratio: 16/9;" />
+          <div class="font-bold leading-snug"><a class="hover:underline" href="https://www.thehindu.com/data/india-is-getting-complacent-in-its-fight-against-polio-data/article68578333.ece" target="_blank">India is getting complacent in its fight against polio: Data — The Hindu</a></div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-500">Google Sheets</span>
+            <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-500">Tableau</span>
+            <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-500">Flourish</span>
+          </div>
+          <div class="text-gray-600 leading-relaxed">Analyzed vaccination and surveillance data to show how India's urgency in fighting polio has waned, even as the risk of resurgence quietly grows.</div>
+          <div class="flex gap-4 text-sm">
+            <a class="underline hover:text-gray-500" href="The%20Hindu%20Clip%202.pdf" target="_blank">PDF</a>
+          </div>
         </div>
 
-        <div class="pt-9 flex gap-8 justify-center">
-<a class="underline" href="https://www.linkedin.com/in/amanda-fernandez-b0356a250/">LinkedIn</a>
-          <a class="underline" href="https://www.instagram.com/22.amanda_/">Instagram</a>
-          <a class="underline" href="mailto:rmf2196@columbia.edu">Email</a>
+        <div class="block space-y-3 border border-gray-200 rounded-md p-4">
+          <img alt="Defying odds, more girls enter mechanical, civil, marine and mining engineering courses" src="engineering-graph.png"
+            class="w-full rounded object-cover bg-gray-100" style="aspect-ratio: 16/9;" />
+          <div class="font-bold leading-snug"><a class="hover:underline" href="https://www.thehindu.com/data/defying-odds-more-girls-enter-mechanical-civil-marine-and-mining-engineering-courses/article68577023.ece" target="_blank">Defying odds, more girls enter mechanical, civil, marine and mining engineering courses — The Hindu</a></div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-500">Google Sheets</span>
+            <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-500">Tableau</span>
+            <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-500">Flourish</span>
+          </div>
+          <div class="text-gray-600 leading-relaxed">Crunched enrollment data across thousands of colleges to uncover a quiet but steady rise of women entering the most male-dominated engineering disciplines.</div>
+          <div class="flex gap-4 text-sm">
+            <a class="underline hover:text-gray-500" href="The%20Hindu%20Clip%201.pdf" target="_blank">PDF</a>
+          </div>
         </div>
 
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <a
-            class="block space-y-4 rounded-md p-4 outline-1 outline-gray-500 hover:outline"
-            href="https://amandamiriamfernandez.github.io/Cig_Tax/"
-            target="_blank"
-          >
-            <img alt="Up in Smoke: Cigarette Tax and Smuggling" src="cig-tax-thumb.png" class="w-full rounded object-contain bg-gray-900" />
-            <div class="text-gray-300 text-lg">Up in Smoke: How Cigarette Taxes Drive a National Smuggling Market</div>
-            <div class="text-gray-300 text-lg leading-relaxed text-justify">Used Python and pandas to analyze state-level cigarette smuggling rates, finding that high-tax states drive massive black market inflows while low-tax states become accidental suppliers. Built a scrollytelling map, scatter plot, and diverging bar chart to show the geographic pattern.</div>
-            <div class="flex flex-wrap gap-2">
-              <span class="text-lg px-2 py-1 rounded bg-gray-800 text-gray-400">D3.js</span>
-              <span class="text-lg px-2 py-1 rounded bg-gray-800 text-gray-400">Python</span>
-              <span class="text-lg px-2 py-1 rounded bg-gray-800 text-gray-400">Scrollama</span>
-            </div>
-          </a>
-
-          <a
-            class="block space-y-4 rounded-md p-4 outline-1 outline-gray-500 hover:outline"
-            href="https://amandamiriamfernandez.github.io/saffronties/"
-            target="_blank"
-          >
-            <img alt="Saffron Ties" src="saffronties-thumb.jpg" class="w-full rounded object-contain bg-gray-900" />
-            <div class="text-gray-300 text-lg">Saffron Ties: India's Global Nationalist Network</div>
-            <div class="text-gray-300 text-lg leading-relaxed text-justify">Used Python and pandas to map 108+ Hindu nationalist organizations across 17 U.S. states and 2,600+ globally, finding their transnational network operates through an interlocking web of charities, PACs, and lobbying groups.</div>
-            <div class="flex flex-wrap gap-2">
-              <span class="text-lg px-2 py-1 rounded bg-gray-800 text-gray-400">Python</span>
-              <span class="text-lg px-2 py-1 rounded bg-gray-800 text-gray-400">Datawrapper</span>
-              <span class="text-lg px-2 py-1 rounded bg-gray-800 text-gray-400">ai2html</span>
-              <span class="text-lg px-2 py-1 rounded bg-gray-800 text-gray-400">Adobe Illustrator</span>
-            </div>
-          </a>
-
-          <a
-            class="block space-y-4 rounded-md p-4 outline-1 outline-gray-500 hover:outline"
-            href="https://amandamiriamfernandez.github.io/Motor_Vehicle_Crashes/"
-            target="_blank"
-          >
-            <img alt="Motor Vehicle Crashes" src="motor-crashes-thumb.jpg" class="w-full rounded object-contain bg-gray-900" />
-            <div class="text-gray-300 text-lg">Who's Behind the Wheel When Motor Crashes Happen?</div>
-            <div class="text-gray-300 text-lg leading-relaxed text-justify">Used Python and pandas to analyze New York State crash data to examine gender disparities in motor vehicle accidents. Data visualizations with ggplot and Datawrapper.</div>
-            <div class="flex flex-wrap gap-2">
-              <span class="text-lg px-2 py-1 rounded bg-gray-800 text-gray-400">Python</span>
-              <span class="text-lg px-2 py-1 rounded bg-gray-800 text-gray-400">Datawrapper</span>
-              <span class="text-lg px-2 py-1 rounded bg-gray-800 text-gray-400">ggplot</span>
-            </div>
-          </a>
-
-          <a
-            class="block space-y-4 rounded-md p-4 outline-1 outline-gray-500 hover:outline"
-            href="https://www.thehindu.com/data/india-is-getting-complacent-in-its-fight-against-polio-data/article68578333.ece"
-            target="_blank"
-          >
-            <img
-              alt="India is getting complacent in its fight against polio: Data"
-              src="graph.jpg"
-              class="h-48 w-full rounded object-cover"
-            />
-            <div class="text-gray-300 text-lg">India is getting complacent in its fight against polio: Data - The Hindu</div>
-            <div class="text-gray-300 text-lg leading-relaxed text-justify">Analyzed vaccination and surveillance data to show how India's urgency in fighting polio has waned, even as the risk of resurgence quietly grows.</div>
-            <div class="flex flex-wrap gap-2">
-              <span class="text-lg px-2 py-1 rounded bg-gray-800 text-gray-400">Google Sheets</span>
-              <span class="text-lg px-2 py-1 rounded bg-gray-800 text-gray-400">Tableau</span>
-              <span class="text-lg px-2 py-1 rounded bg-gray-800 text-gray-400">Flourish</span>
-            </div>
-          </a>
-
-          <a
-            class="block space-y-4 rounded-md p-4 outline-1 outline-gray-500 hover:outline"
-            href="https://www.thehindu.com/data/defying-odds-more-girls-enter-mechanical-civil-marine-and-mining-engineering-courses/article68577023.ece"
-            target="_blank"
-          >
-            <img
-              alt="Defying odds, more girls enter mechanical, civil, marine and mining engineering courses"
-              src="engineering-graph.png"
-              class="h-48 w-full rounded object-cover"
-            />
-            <div class="text-gray-300 text-lg">Defying odds, more girls enter mechanical, civil, marine and mining engineering courses: Data - The Hindu</div>
-            <div class="text-gray-300 text-lg leading-relaxed text-justify">Crunched enrollment data across thousands of colleges to uncover a quiet but steady rise of women entering the most male-dominated engineering disciplines.</div>
-            <div class="flex flex-wrap gap-2">
-              <span class="text-lg px-2 py-1 rounded bg-gray-800 text-gray-400">Google Sheets</span>
-              <span class="text-lg px-2 py-1 rounded bg-gray-800 text-gray-400">Tableau</span>
-              <span class="text-lg px-2 py-1 rounded bg-gray-800 text-gray-400">Flourish</span>
-            </div>
-          </a>
-
-          <a
-            class="block space-y-4 rounded-md p-4 outline-1 outline-gray-500 hover:outline"
-            href="https://www.thehindu.com/data/haryana-and-punjab-always-dominate-indias-olympic-contingent-data/article68487299.ece"
-            target="_blank"
-          >
-            <img
-              alt="Haryana and Punjab always dominate India's Olympic contingent"
-              src="olympic2.png"
-              class="h-48 w-full rounded object-cover"
-            />
-            <div class="text-gray-300 text-lg">Haryana and Punjab always dominate India's Olympic contingent: Data - The Hindu</div>
-            <div class="text-gray-300 text-lg leading-relaxed text-justify">Used historical data on India's Olympic teams to show how two states have consistently punched far above their weight in producing the country's top athletes.</div>
-            <div class="flex flex-wrap gap-2">
-              <span class="text-lg px-2 py-1 rounded bg-gray-800 text-gray-400">Google Sheets</span>
-              <span class="text-lg px-2 py-1 rounded bg-gray-800 text-gray-400">Tableau</span>
-              <span class="text-lg px-2 py-1 rounded bg-gray-800 text-gray-400">Flourish</span>
-            </div>
-          </a>
+        <div class="block space-y-3 border border-gray-200 rounded-md p-4">
+          <img alt="Haryana and Punjab always dominate India's Olympic contingent" src="olympic2.png"
+            class="w-full rounded object-cover bg-gray-100" style="aspect-ratio: 16/9;" />
+          <div class="font-bold leading-snug"><a class="hover:underline" href="https://www.thehindu.com/data/haryana-and-punjab-always-dominate-indias-olympic-contingent-data/article68487299.ece" target="_blank">Haryana and Punjab always dominate India's Olympic contingent — The Hindu</a></div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-500">Google Sheets</span>
+            <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-500">Tableau</span>
+            <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-500">Flourish</span>
+          </div>
+          <div class="text-gray-600 leading-relaxed">Used historical data on India's Olympic teams to show how two states have consistently punched far above their weight in producing the country's top athletes.</div>
+          <div class="flex gap-4 text-sm">
+            <a class="underline hover:text-gray-500" href="The%20Hindu%20Clip%203.pdf" target="_blank">PDF</a>
+          </div>
         </div>
 
+        <a
+          class="block space-y-3 group border border-gray-200 rounded-md p-4"
+          href="https://thewire.in/education/autonomy-a-rating-fail-to-mask-the-crisis-facing-madras-university"
+          target="_blank"
+        >
+          <img alt="Autonomy, A++ Rating Fail to Mask the Crisis Facing Madras University" src="madras.jpg"
+            class="w-full rounded object-cover bg-gray-100" style="aspect-ratio: 16/9;" />
+          <div class="font-bold leading-snug group-hover:underline">Autonomy, A++ Rating Fail to Mask the Crisis Facing Madras University — The Wire</div>
+          <div class="text-gray-600 leading-relaxed">Investigated financial and academic records to expose deep structural crises at one of India's oldest universities, hidden behind a prestigious accreditation rating.</div>
+        </a>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <a
-            class="block space-y-4 rounded-md p-4 outline-1 outline-gray-500 hover:outline"
-            href="https://thewire.in/education/autonomy-a-rating-fail-to-mask-the-crisis-facing-madras-university"
-            target="_blank"
-          >
-            <img
-              alt="Autonomy, A++ Rating Fail to Mask the Crisis Facing Madras University"
-              src="madras.jpg"
-              class="h-48 w-full rounded object-cover"
-            />
-            <div class="text-gray-300 text-lg">Autonomy, A++ Rating Fail to Mask the Crisis Facing Madras University - The Wire</div>
-            <div class="text-gray-300 text-lg leading-relaxed text-justify">Investigated financial and academic records to expose deep structural crises at one of India's oldest universities, hidden behind a prestigious accreditation rating.</div>
-          </a>
+        <a
+          class="block space-y-3 group border border-gray-200 rounded-md p-4"
+          href="https://starofmysore.com/bikernis-riding-beyond-boundaries/"
+          target="_blank"
+        >
+          <img alt="Bikernis: Riding Beyond Boundaries" src="Bikernis.jpg"
+            class="w-full rounded object-cover bg-gray-100" style="aspect-ratio: 16/9;" />
+          <div class="font-bold leading-snug group-hover:underline">Bikernis: Riding Beyond Boundaries — Star of Mysore</div>
+          <div class="text-gray-600 leading-relaxed">Profiled a community of women motorcyclists defying gender norms on the road, exploring what drives them and the barriers they navigate.</div>
+        </a>
 
-          <a
-            class="block space-y-4 rounded-md p-4 outline-1 outline-gray-500 hover:outline"
-            href="https://starofmysore.com/bikernis-riding-beyond-boundaries/"
-            target="_blank"
-          >
-            <img
-              alt="Bikernis: Riding Beyond Boundaries"
-              src="Bikernis.jpg"
-              class="h-48 w-full rounded object-cover"
-            />
-            <div class="text-gray-300 text-lg">Bikernis: Riding Beyond Boundaries - Star of Mysore</div>
-            <div class="text-gray-300 text-lg leading-relaxed text-justify">Profiled a community of women motorcyclists defying gender norms on the road, exploring what drives them and the barriers they navigate.</div>
-          </a>
+        <a
+          class="block space-y-3 group border border-gray-200 rounded-md p-4"
+          href="https://starofmysore.com/category/feature-articles/"
+          target="_blank"
+        >
+          <img alt="Gold in Gutters" src="gold-hunters-2.jpg"
+            class="w-full rounded object-cover bg-gray-100" style="aspect-ratio: 16/9;" />
+          <div class="font-bold leading-snug group-hover:underline">Gold in Gutters — Star of Mysore</div>
+          <div class="text-gray-600 leading-relaxed">Reported on a woman who earns her living sifting gold from the riverbed — part of a generations-old community of gold collectors who wade into the river daily, panning sediment by hand in hopes of finding traces of the precious metal.</div>
+        </a>
 
-          <a
-            class="block space-y-4 rounded-md p-4 outline-1 outline-gray-500 hover:outline"
-            href="https://starofmysore.com/category/feature-articles/"
-            target="_blank"
-          >
-            <img
-              alt="Feature Articles - Star of Mysore"
-              src="gold-hunters-2.jpg"
-              class="h-48 w-full rounded object-cover"
-            />
-            <div class="text-gray-300 text-lg">Gold in Gutters - Star of Mysore</div>
-            <div class="text-gray-300 text-lg leading-relaxed text-justify">Reported on a woman who earns her living sifting gold from the riverbed — part of a generations-old community of gold collectors who wade into the river daily, panning sediment by hand in hopes of finding traces of the precious metal. The story follows her grueling routine, the economics of survival behind this vanishing practice, and what it means to chase gold in the gutters of a modern city.</div>
-          </a>
-        </div>
+      </div>
     </main>
-    <canvas id="particles-canvas"></canvas>
-    <script>
-      const canvas = document.getElementById('particles-canvas');
-      const ctx = canvas.getContext('2d');
-
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-
-      const particles = [];
-      const count = 80;
-
-      for (let i = 0; i < count; i++) {
-        particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          r: Math.random() * 0.8 + 0.3,
-          dx: (Math.random() - 0.5) * 0.4,
-          dy: (Math.random() - 0.5) * 0.4,
-          opacity: Math.random() * 0.5 + 0.2
-        });
-      }
-
-      function draw() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        for (const p of particles) {
-          ctx.beginPath();
-          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-          ctx.fillStyle = 'rgba(255, 255, 255, ' + p.opacity + ')';
-          ctx.fill();
-
-          p.x += p.dx;
-          p.y += p.dy;
-
-          if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
-          if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
-        }
-
-        for (let i = 0; i < particles.length; i++) {
-          for (let j = i + 1; j < particles.length; j++) {
-            const dx = particles[i].x - particles[j].x;
-            const dy = particles[i].y - particles[j].y;
-            const dist = Math.sqrt(dx * dx + dy * dy);
-            if (dist < 120) {
-              ctx.beginPath();
-              ctx.moveTo(particles[i].x, particles[i].y);
-              ctx.lineTo(particles[j].x, particles[j].y);
-              ctx.strokeStyle = 'rgba(255, 255, 255, ' + (0.15 - dist / 800) + ')';
-              ctx.stroke();
-            }
-          }
-        }
-
-        requestAnimationFrame(draw);
-      }
-
-      draw();
-
-      window.addEventListener('resize', () => {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-      });
-    </script>
   </body>
 </html>
